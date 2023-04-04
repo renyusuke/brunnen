@@ -7,10 +7,12 @@ import (
 )
 
 var (
-	defaultLan    = vars.CN
-	defaultStatus = cn.Operator
+	defaultLan       = vars.CN
+	defaultStatus    = cn.Operator
+	defaultAdminType = cn.Operator
 )
 
+// GetAdminStatusDesc 拿使用者職位
 func GetAdminStatusDesc(status int64, lanCode int64) (desc string) {
 	if lanCode == 0 {
 		lanCode = defaultLan
@@ -30,6 +32,31 @@ func GetAdminStatusDesc(status int64, lanCode int64) (desc string) {
 		break
 	default:
 		desc = defaultStatus
+		break
+	}
+	return desc
+}
+
+// GetAdminTypeDesc 拿使用者狀態
+func GetAdminTypeDesc(userType int64, lanCode int64) (desc string) {
+	if userType == 0 {
+		lanCode = defaultLan
+	}
+	switch userType | lanCode {
+	case enums.TypeAdminNormal | vars.CN:
+		desc = cn.AdminNormal
+		break
+	case enums.TypeAdminFreeze | vars.CN:
+		desc = cn.AdminFreeze
+		break
+	case enums.TypeAdminDelete | vars.CN:
+		desc = cn.AdminDelete
+		break
+	case enums.TypeAdminLock | vars.CN:
+		desc = cn.AdminLock
+		break
+	default:
+		desc = defaultAdminType
 		break
 	}
 	return desc
