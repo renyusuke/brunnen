@@ -1,16 +1,17 @@
 package enums
 
-// 組職位
+// 組 分類 職位是到 UserType 去區分
 const (
-	StatusGroupAdmin     = 1 //admin 後台組
-	StatusGroupCarAdmin  = 2 //車隊後台組
-	StatusGroupCarDriver = 3 //車手操作組
-	StatusGroupAgent     = 4 //代理後台組
+	TypeGroupAdmin      = 1 //admin 最大權限後台組
+	TypeGroupOperator   = 2 //admin 操作組
+	TypeGroupAccountant = 3 //admin 結算組
+	TypeGroupSecurity   = 4 //admin 風空組
+	TypeGroupCustomer   = 5 //客服組
 )
 
 // 組狀態
 const (
-	TypeGroupNormal = 1 //一般
-	TypeGroupFreeze = 2 //凍結
-	TypeGroupLock   = 3 //封鎖
+	StatusGroupNormal = 1 //一般
+	StatusGroupFreeze = 2 //凍結
+	StatusGroupLock   = 3 //封鎖
 )
