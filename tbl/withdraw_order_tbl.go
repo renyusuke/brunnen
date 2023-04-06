@@ -3,7 +3,7 @@ package tbl
 type WithdrawOrder struct {
 	Model
 	OrderNo         string `gorm:"type:varchar(60)"` // 我方訂單編號
-	MerchantNo      string `gorm:"type:varchar(60)"` // 平台訂單編號
+	MerchantNo      string `gorm:"type:varchar(60)"` // 平台號
 	Type            int64  `gorm:"type:int(12)"`     // 訂單模式
 	Status          int64  `gorm:"type:int(12)"`     // 訂單裝太
 	Sign            string `gorm:"type:varchar(60)"` // 加密sign

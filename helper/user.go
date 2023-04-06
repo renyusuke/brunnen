@@ -6,29 +6,23 @@ import (
 	"brunnen/vars"
 )
 
-var (
-	defaultLan       = vars.CN
-	defaultStatus    = cn.Operator
-	defaultAdminType = cn.Operator
-)
-
-// GetAdminStatusDesc 拿使用者職位
+// GetAdminStatusDesc 拿使用者狀態
 func GetAdminStatusDesc(status int64, lanCode int64) (desc string) {
 	if lanCode == 0 {
 		lanCode = defaultLan
 	}
 	switch status | lanCode {
-	case enums.StatusAdmin | vars.CN:
-		desc = cn.Admin
+	case enums.AdminStatusNormal | vars.CN:
+		desc = cn.AdminStatusNormal
 		break
-	case enums.StatusManager | vars.CN:
-		desc = cn.Manager
+	case enums.AdminStatusFreeze | vars.CN:
+		desc = cn.AdminStatusFreeze
 		break
-	case enums.StatusAccountant | vars.CN:
-		desc = cn.Accountant
+	case enums.AdminStatusDelete | vars.CN:
+		desc = cn.AdminStatusDelete
 		break
-	case enums.StatusOperator | vars.CN:
-		desc = cn.Operator
+	case enums.AdminStatusLock | vars.CN:
+		desc = cn.AdminStatusLock
 		break
 	default:
 		desc = defaultStatus
@@ -37,23 +31,23 @@ func GetAdminStatusDesc(status int64, lanCode int64) (desc string) {
 	return desc
 }
 
-// GetAdminTypeDesc 拿使用者狀態
+// GetAdminTypeDesc 拿使用者職位
 func GetAdminTypeDesc(userType int64, lanCode int64) (desc string) {
 	if userType == 0 {
 		lanCode = defaultLan
 	}
 	switch userType | lanCode {
-	case enums.TypeAdminNormal | vars.CN:
-		desc = cn.AdminNormal
+	case enums.AdminTypeAdmin | vars.CN:
+		desc = cn.AdminTypeAdmin
 		break
-	case enums.TypeAdminFreeze | vars.CN:
-		desc = cn.AdminFreeze
+	case enums.AdminTypeManager | vars.CN:
+		desc = cn.AdminTypeManager
 		break
-	case enums.TypeAdminDelete | vars.CN:
-		desc = cn.AdminDelete
+	case enums.AdminTypeOperator | vars.CN:
+		desc = cn.AdminTypeOperator
 		break
-	case enums.TypeAdminLock | vars.CN:
-		desc = cn.AdminLock
+	case enums.AdminTypeAccountant | vars.CN:
+		desc = cn.AdminTypeAccountant
 		break
 	default:
 		desc = defaultAdminType

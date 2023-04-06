@@ -1,13 +1,13 @@
 package cn
 
-// status
+// User 相關
 var (
-	Admin       = "管理員"
-	Manager     = "經理"
-	Operator    = "操作員"
-	Accountant  = "會計"
-	AdminFreeze = "凍結"
-	AdminNormal = "正常使用"
-	AdminDelete = "已刪除的使用者"
-	AdminLock   = "被封鎖的使用者"
+	AdminTypeAdmin      = "管理員"
+	AdminTypeManager    = "經理"
+	AdminTypeOperator   = "操作員"
+	AdminTypeAccountant = "會計"
+	AdminStatusFreeze   = "凍結"
+	AdminStatusNormal   = "正常使用"
+	AdminStatusDelete   = "已刪除的使用者"
+	AdminStatusLock     = "被封鎖的使用者"
 )
