@@ -9,19 +9,19 @@ var (
 	TypeGroupSecurity   = "風空組"
 	TypeGroupCustomer   = "客服組"
 	GroupTypeMap        = map[int64]string{
-		1: TypeGroupAdmin,
-		2: TypeGroupOperator,
-		3: TypeGroupAccountant,
-		4: TypeGroupSecurity,
-		5: TypeGroupCustomer,
+		enums.TypeGroupAdmin:      TypeGroupAdmin,
+		enums.TypeGroupOperator:   TypeGroupOperator,
+		enums.TypeGroupAccountant: TypeGroupAccountant,
+		enums.TypeGroupSecurity:   TypeGroupSecurity,
+		enums.TypeGroupCustomer:   TypeGroupCustomer,
 	}
 
-	TypeStatusNormal = "一般"
-	TypeStatusFreeze = "凍結"
-	TypeStatusLock   = "封鎖"
-	GroupStatusMap   = map[int64]string{
-		enums.StatusGroupNormal: TypeStatusNormal,
-		2:                       TypeStatusFreeze,
-		3:                       TypeStatusLock,
+	StatusGroupNormal = "一般"
+	StatusGroupFreeze = "凍結"
+	StatusGroupLock   = "封鎖"
+	GroupStatusMap    = map[int64]string{
+		enums.StatusGroupNormal: StatusGroupNormal,
+		enums.StatusGroupFreeze: StatusGroupFreeze,
+		enums.StatusGroupLock:   StatusGroupLock,
 	}
 )
