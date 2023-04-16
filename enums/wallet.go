@@ -12,3 +12,8 @@ const (
 	WalletStatusFreeze = 2 //凍結
 	WalletStatusLock   = 3 //封鎖
 )
+
+const (
+	WalletCurrencyCNY  = 1
+	WalletCurrencyUSDT = 2
+)

@@ -1,7 +1,6 @@
 package helper
 
 import (
-	"brunnen/enums"
 	"brunnen/lan/cn"
 	"brunnen/vars"
 )
@@ -16,24 +15,12 @@ func init() {
 	WalletStatusMap[vars.CN] = cn.WalletStatusMap
 }
 
-// GetWalletStatusDesc 拿使用者狀態
+// GetWalletTypeDesc 拿錢包
+func GetWalletTypeDesc(WalletType int64, lanCode int64) (desc string) {
+	return WalletTypeMap[lanCode][WalletType]
+}
+
+// GetWalletStatusDesc 拿錢包狀態
 func GetWalletStatusDesc(status int64, lanCode int64) (desc string) {
-	if lanCode == 0 {
-		lanCode = defaultLan
-	}
-	switch status | lanCode {
-	case enums.WalletStatusNormal | vars.CN:
-		desc = cn.WalletStatusNormal
-		break
-	case enums.WalletStatusFreeze | vars.CN:
-		desc = cn.WalletStatusFreeze
-		break
-	case enums.WalletStatusLock | vars.CN:
-		desc = cn.WalletStatusLock
-		break
-	default:
-		desc = defaultWalletStatus
-		break
-	}
-	return desc
+	return WalletStatusMap[lanCode][status]
 }
