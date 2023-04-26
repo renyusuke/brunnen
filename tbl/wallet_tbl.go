@@ -2,6 +2,7 @@ package tbl
 
 type Wallet struct {
 	Model
+	ClientUserId  int64 `gorm:"type:int(12);comment:'商戶ID'"`
 	CurrencyId    int64 `gorm:"type:int(12);comment:'幣種'"`
 	WalletType    int64 `gorm:"type:int(12);comment:'錢包類別'"`
 	WalletStatus  int64 `gorm:"type:int(12);comment:'錢包狀態'"`
