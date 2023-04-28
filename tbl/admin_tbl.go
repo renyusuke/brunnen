@@ -3,9 +3,9 @@ package tbl
 // Admin 操作人
 type Admin struct {
 	Model
-	Name         string `gorm:"type:varchar(20)"`
-	Type         int64  `gorm:"type:int(12)"`
-	Status       int64  `gorm:"type:int(12)"`
+	Name         string `gorm:"type:varchar(20);comment:'使用者名稱'"`
+	Type         int64  `gorm:"type:int(12);comment:'職位'"`
+	Status       int64  `gorm:"type:int(12);comment:'狀態'"`
 	Account      string `gorm:"type:varchar(20)"`
 	Pass         string `gorm:"type:varchar(20)"`
 	GToken       string `gorm:"type:varchar(50)"`
