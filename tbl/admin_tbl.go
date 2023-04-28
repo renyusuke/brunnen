@@ -7,7 +7,7 @@ type Admin struct {
 	Type         int64  `gorm:"type:int(12);comment:'職位'"`
 	Status       int64  `gorm:"type:int(12);comment:'狀態'"`
 	Account      string `gorm:"type:varchar(20)"`
-	Pass         string `gorm:"type:varchar(20)"`
+	Pass         string `gorm:"type:varchar(40)"`
 	GToken       string `gorm:"type:varchar(50)"`
 	SecondSecure int64  `gorm:"type:int(12)"`
 	UpdatedAt    int64  `gorm:"autoUpdateTime:milli;comment:'更新時間'"`

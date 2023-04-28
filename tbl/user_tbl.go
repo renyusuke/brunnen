@@ -7,7 +7,7 @@ type Users struct {
 	Type         int64  `gorm:"type:int(12)"`
 	Status       int64  `gorm:"type:int(12)"`
 	Account      string `gorm:"type:varchar(20)"`
-	Pass         string `gorm:"type:varchar(20)"`
+	Pass         string `gorm:"type:varchar(40)"`
 	GToken       string `gorm:"type:varchar(50)"`
 	SecondSecure int64  `gorm:"type:int(12)"`
 	CreatedAt    int64  `gorm:"type:int(12)"`
