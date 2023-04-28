@@ -1,5 +1,6 @@
 package tbl
 
+// Users 商戶使用者
 type Users struct {
 	Model
 	UserName     string `gorm:"type:varchar(20)"`

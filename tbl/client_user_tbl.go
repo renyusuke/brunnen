@@ -1,5 +1,6 @@
 package tbl
 
+// ClientUser 商戶使用者
 type ClientUser struct {
 	Model
 	ClientUserSign string `gorm:"type:varchar(50);comment:'商戶使用者唯一標記'"`

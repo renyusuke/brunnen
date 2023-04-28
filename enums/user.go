@@ -2,16 +2,16 @@ package enums
 
 // 職位 status
 const (
-	AdminStatusNormal = 1
-	AdminStatusFreeze = 2
-	AdminStatusDelete = 3
-	AdminStatusLock   = 4
+	UserStatusNormal = 1
+	UserStatusFreeze = 2
+	UserStatusDelete = 3
+	UserStatusLock   = 4
 )
 
 // 狀態 type
 const (
-	AdminTypeAdmin      = 1
-	AdminTypeManager    = 2
-	AdminTypeOperator   = 3
-	AdminTypeAccountant = 4
+	UserTypeAdmin      = 1
+	UserTypeManager    = 2
+	UserTypeOperator   = 3
+	UserTypeAccountant = 4
 )

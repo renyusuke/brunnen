@@ -1,5 +1,6 @@
 package tbl
 
+// Wallet 商戶的錢包
 type Wallet struct {
 	Model
 	ClientUserId  int64 `gorm:"type:int(12);comment:'商戶ID'"`
