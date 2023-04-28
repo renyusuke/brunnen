@@ -1,5 +1,6 @@
 package tbl
 
+// Admin 商戶操作人
 type Admin struct {
 	Model
 	Name        int64 `gorm:"type:varchar(20);comment:'名稱'"`
