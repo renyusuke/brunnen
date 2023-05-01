@@ -14,12 +14,12 @@ var (
 	expiration = 10 * time.Second
 )
 
-func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) bool {
+func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) (res bool, err error) {
 
 	k := fmt.Sprintf(key, val)
-	err := r.SetNX(ctx, key, 0, expiration).Err()
+	err = r.SetNX(ctx, key, 0, expiration).Err()
 	if err != nil {
-		return false
+		return false, err.Error()
 	}
 
 	go func(k string) {
@@ -35,5 +35,5 @@ func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) bool {
 		}
 	}(k)
 
-	return true
+	return true, err.Error()
 }
