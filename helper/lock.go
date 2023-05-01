@@ -14,7 +14,7 @@ var (
 	expiration = 10 * time.Second
 )
 
-func SetLock(ctx *gin.Context, r *redis.ClusterClient, val interface{}) bool {
+func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) bool {
 
 	k := fmt.Sprintf(key, val)
 	err := r.SetNX(ctx, key, 0, expiration).Err()
