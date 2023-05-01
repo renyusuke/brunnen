@@ -12,4 +12,5 @@ func Res(c *gin.Context, httpCode int, data any, message any) {
 			"data":    data,
 		},
 	)
+	c.Next()
 }
