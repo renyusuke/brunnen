@@ -9,12 +9,12 @@ var (
 	AdminStatusMap = map[int64]map[int64]string{
 		vars.CN: cn.AdminStatusMap,
 	}
-	//AdminStatusMap map[int64]map[int64]string
-	AdminTypeMap map[int64]map[int64]string
+	AdminTypeMap = map[int64]map[int64]string{
+		vars.CN: cn.AdminTypeMap,
+	}
 )
 
 func init() {
-	AdminTypeMap[vars.CN] = cn.AdminTypeMap
 }
 
 // GetAdminStatusMap 拿使用者狀態
