@@ -19,7 +19,7 @@ func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) (res bool, err 
 	k := fmt.Sprintf(key, val)
 	err = r.SetNX(ctx, key, 0, expiration).Err()
 	if err != nil {
-		return false, err.Error()
+		return false, err
 	}
 
 	go func(k string) {
