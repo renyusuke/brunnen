@@ -35,5 +35,5 @@ func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) (res bool, err 
 		}
 	}(k)
 
-	return true, err.Error()
+	return true, err
 }
