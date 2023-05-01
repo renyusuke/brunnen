@@ -1,6 +1,6 @@
 package cn
 
-import "brunnen/enums"
+import "github.com/renyusuke/brunnen/enums"
 
 var (
 	TypeGroupAdmin      = "最高權限組"

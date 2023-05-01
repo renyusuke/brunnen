@@ -1,9 +1,9 @@
 package helper
 
 import (
-	"brunnen/enums"
-	"brunnen/lan/cn"
-	"brunnen/vars"
+	"github.com/renyusuke/brunnen/enums"
+	"github.com/renyusuke/brunnen/lan/cn"
+	"github.com/renyusuke/brunnen/vars"
 )
 
 // GetAdminStatusDesc 拿使用者狀態

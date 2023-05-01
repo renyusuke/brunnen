@@ -1,8 +1,8 @@
 package helper
 
 import (
-	"brunnen/lan/cn"
-	"brunnen/vars"
+	"github.com/renyusuke/brunnen/lan/cn"
+	"github.com/renyusuke/brunnen/vars"
 )
 
 var (

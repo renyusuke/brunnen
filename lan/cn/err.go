@@ -1,8 +1,8 @@
 package cn
 
 import (
-	"brunnen/enums"
 	"errors"
+	enums "github.com/renyusuke/brunnen/enums"
 )
 
 var (
@@ -14,6 +14,7 @@ var (
 	ErrPassNotEnough  = errors.New("密碼長度不夠")
 
 	ErrMap = map[int64]error{
+
 		enums.ErrAdminTokenExpired: ErrAdminTokenExpired,
 		enums.ErrVerifyFail:        ErrVerifyFail,
 		enums.ErrAccountFreeze:     ErrAccountFreeze,
