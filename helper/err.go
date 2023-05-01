@@ -12,7 +12,7 @@ var (
 func init() {
 	ErrMap[vars.CN] = cn.ErrMap
 }
-func GetErr(errorCode int64) (errDesc error) {
+func GetErr(errorCode int64, landConde int64) (errDesc error) {
 	language := defaultLan
 	return ErrMap[language][errorCode]
 
