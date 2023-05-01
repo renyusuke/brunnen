@@ -6,12 +6,14 @@ import (
 )
 
 var (
-	AdminStatusMap map[int64]map[int64]string
-	AdminTypeMap   map[int64]map[int64]string
+	AdminStatusMap = map[int64]map[int64]string{
+		vars.CN: cn.AdminStatusMap,
+	}
+	//AdminStatusMap map[int64]map[int64]string
+	AdminTypeMap map[int64]map[int64]string
 )
 
 func init() {
-	AdminStatusMap[vars.CN] = cn.AdminStatusMap
 	AdminTypeMap[vars.CN] = cn.AdminTypeMap
 }
 
