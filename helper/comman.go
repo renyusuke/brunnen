@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	defaultLan          = vars.CN
-	defaultStatus       = cn.AdminStatusNormal
-	defaultAdminType    = cn.AdminTypeOperator
-	defaultWalletStatus = cn.WalletStatusNormal
+	DefaultLan          = vars.CN
+	DefaultStatus       = cn.AdminStatusNormal
+	DefaultAdminType    = cn.AdminTypeOperator
+	DefaultWalletStatus = cn.WalletStatusNormal
 )
