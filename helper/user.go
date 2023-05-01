@@ -6,13 +6,15 @@ import (
 )
 
 var (
-	UserStatusMap map[int64]map[int64]string
-	UserTypeMap   map[int64]map[int64]string
+	UserStatusMap = map[int64]map[int64]string{
+		vars.CN: cn.UserStatusMap,
+	}
+	UserTypeMap = map[int64]map[int64]string{
+		vars.CN: cn.UserTypeMap,
+	}
 )
 
 func init() {
-	UserStatusMap[vars.CN] = cn.UserStatusMap
-	UserTypeMap[vars.CN] = cn.UserTypeMap
 }
 
 // GetUserStatusDesc 拿使用者狀態

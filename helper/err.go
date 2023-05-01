@@ -6,11 +6,12 @@ import (
 )
 
 var (
-	ErrMap map[int64]map[int64]error
+	ErrMap = map[int64]map[int64]error{
+		vars.CN: cn.ErrMap,
+	}
 )
 
 func init() {
-	ErrMap[vars.CN] = cn.ErrMap
 }
 func GetErr(errorCode int64, landConde int64) (errDesc error) {
 	language := defaultLan

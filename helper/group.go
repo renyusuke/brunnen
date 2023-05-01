@@ -6,14 +6,16 @@ import (
 )
 
 var (
-	GroupTypeMap   map[int64]map[int64]string
-	GroupStatusMap map[int64]map[int64]string
+	GroupTypeMap = map[int64]map[int64]string{
+		vars.CN: cn.GroupTypeMap,
+	}
+	GroupStatusMap = map[int64]map[int64]string{
+		vars.CN: cn.GroupStatusMap,
+	}
 )
 
 func init() {
 
-	GroupTypeMap[vars.CN] = cn.GroupTypeMap
-	GroupStatusMap[vars.CN] = cn.GroupStatusMap
 }
 
 // GetGroupTypeDesc 組 職位

@@ -6,13 +6,15 @@ import (
 )
 
 var (
-	WalletTypeMap   map[int64]map[int64]string
-	WalletStatusMap map[int64]map[int64]string
+	WalletTypeMap = map[int64]map[int64]string{
+		vars.CN: cn.WalletTypeMap,
+	}
+	WalletStatusMap = map[int64]map[int64]string{
+		vars.CN: cn.WalletStatusMap,
+	}
 )
 
 func init() {
-	WalletTypeMap[vars.CN] = cn.WalletTypeMap
-	WalletStatusMap[vars.CN] = cn.WalletStatusMap
 }
 
 // GetWalletTypeDesc 拿錢包

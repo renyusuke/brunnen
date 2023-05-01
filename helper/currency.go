@@ -6,11 +6,12 @@ import (
 )
 
 var (
-	CurrencyMap map[int64]map[int64]string
+	CurrencyMap = map[int64]map[int64]string{
+		vars.CN: cn.CurrencyMap,
+	}
 )
 
 func init() {
-	CurrencyMap[vars.CN] = cn.CurrencyMap
 }
 
 // GetCurrencyDesc 拿錢包
