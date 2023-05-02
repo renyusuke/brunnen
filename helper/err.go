@@ -13,8 +13,8 @@ var (
 
 func init() {
 }
-func GetErr(errorCode int64, landConde int64) (errDesc string) {
+func GetErr(errorCode int64, landConde int64) (err error) {
 	language := DefaultLan
-	return ErrMap[language][errorCode].Error()
+	return ErrMap[language][errorCode]
 
 }
