@@ -26,7 +26,7 @@ func GetToken(ctx *gin.Context, rdb *redis.Client, key string) (res bool, err er
 	return true, err, token
 }
 
-func SetToken(ctx *gin.Context, rdb *redis.Client, key string, value string) (err error) {
+func SetToken(ctx *gin.Context, rdb *redis.Client, key string, value any) (err error) {
 	err = rdb.Set(ctx, key, value, expireTim).Err()
 	return err
 }
