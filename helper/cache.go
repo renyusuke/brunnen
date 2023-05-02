@@ -13,7 +13,7 @@ var (
 func GetToken(ctx *gin.Context, rdb *redis.Client, key string) (res bool, err error, token string) {
 	token, err = rdb.Get(ctx, key).Result()
 	if err != nil {
-		panic(err)
+		return false, err, token
 	}
 	if err != nil {
 		return false, err, ""
