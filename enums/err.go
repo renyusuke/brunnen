@@ -8,4 +8,5 @@ const (
 	ErrAccountFreeze     = 10003 //帳號已凍結
 	ErrNameDuplicated    = 20001 //名稱重複
 	ErrPassNotEnough     = 20002 //密碼長度不足
+	ErrSystemError       = 50000 //系統錯誤
 )
