@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	expireTim = time.Minute * 2
+	expireTim = time.Minute * 60
 )
 
 func GetToken(ctx *gin.Context, rdb *redis.Client, key string) (res bool, err error, token string) {
