@@ -35,15 +35,16 @@ func GetAdminTypeMap(userType int64, lanCode int64) (desc string) {
 
 type Base struct {
 	*tbl.Admin
-	IP                string `json:"ip"`
-	Path              string `json:"path"`
-	Token             string `json:"token"`
-	Lan               int64  `json:"lan"`
-	FirstValidatorId  int64  `json:"first_validator_id"`  // 一次验证人ID
-	FirstValidator    string `json:"first_validator"`     // 一次验证人账号
-	SecondValidatorId int64  `json:"second_validator_id"` // 二次验证人ID
-	SecondValidator   string `json:"second_validator"`    // 二次验证人账号
-	Validator         string `json:"validator"`           // 验证人
+	Route             []int64 `json:"route"`
+	IP                string  `json:"ip"`
+	Path              string  `json:"path"`
+	Token             string  `json:"token"`
+	Lan               int64   `json:"lan"`
+	FirstValidatorId  int64   `json:"first_validator_id"`  // 一次验证人ID
+	FirstValidator    string  `json:"first_validator"`     // 一次验证人账号
+	SecondValidatorId int64   `json:"second_validator_id"` // 二次验证人ID
+	SecondValidator   string  `json:"second_validator"`    // 二次验证人账号
+	Validator         string  `json:"validator"`           // 验证人
 }
 
 func GetBase(ctx *gin.Context) (*Base, error) {
