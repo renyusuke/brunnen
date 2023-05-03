@@ -11,5 +11,5 @@ type Wallet struct {
 	TempBalance   int64 `gorm:"type:bigint(20);comment:'異動中餘額'"`
 	FreezeBalance int64 `gorm:"type:bigint(20);comment:'凍結餘額'"`
 	UpdatedAt     int64 `gorm:"autoUpdateTime:milli"`
-	CreatedAt     int64 `gorm:"type:int(14);comment:'創建時間'"`
+	CreatedAt     int64 `gorm:"type:bigint(20);comment:'創建時間'"`
 }

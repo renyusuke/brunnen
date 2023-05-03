@@ -11,6 +11,6 @@ type WithdrawOrder struct {
 	Sign            string `gorm:"type:varchar(60)"` // 加密sign
 	Shift           string `gorm:"type:varchar(40)"` //更次
 	ClientCreatedAt int64  `gorm:"type:int(12)"`     //平台創建時間
-	CreatedAt       int64  `gorm:"type:int(12)"`     //創建時間
-	UpdatedAt       int64  `gorm:"type:int(12)"`     //更新時間
+	CreatedAt       int64  `gorm:"type:bigint(20)"`  //創建時間
+	UpdatedAt       int64  `gorm:"type:bigint(20)"`  //更新時間
 }
