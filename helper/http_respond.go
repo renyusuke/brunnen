@@ -5,7 +5,7 @@ import (
 )
 
 func Res(c *gin.Context, httpCode int, data any, message any) {
-	c.JSON(
+	c.AbortWithStatusJSON(
 		httpCode,
 		gin.H{
 			"message": message,
