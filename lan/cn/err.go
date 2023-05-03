@@ -11,15 +11,16 @@ var (
 	ErrVerifyFail        = errors.New("驗證失敗")
 	ErrAccountFreeze     = errors.New("已凍結")
 
-	ErrDuplicatedName = errors.New("名稱重複")
-	ErrPassNotEnough  = errors.New("密碼長度不夠")
-
-	ErrMap = map[int64]error{
+	ErrDuplicatedName    = errors.New("名稱重複")
+	ErrPassNotEnough     = errors.New("密碼長度不夠")
+	ErrAdminNameNotExist = errors.New("管理者名稱不存在")
+	ErrMap               = map[int64]error{
 		enums.RequestSuccess:       RequestSuccess,
 		enums.ErrAdminTokenExpired: ErrAdminTokenExpired,
 		enums.ErrVerifyFail:        ErrVerifyFail,
 		enums.ErrAccountFreeze:     ErrAccountFreeze,
 		enums.ErrNameDuplicated:    ErrDuplicatedName,
 		enums.ErrPassNotEnough:     ErrPassNotEnough,
+		enums.ErrAdminNameNotExist: ErrAdminNameNotExist,
 	}
 )
