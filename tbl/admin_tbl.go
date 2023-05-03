@@ -9,7 +9,7 @@ type Admin struct {
 	Account      string `gorm:"type:varchar(40)"`
 	Pass         string `gorm:"type:varchar(40)"`
 	GToken       string `gorm:"type:varchar(50)"`
-	SecondSecure int64  `gorm:"type:int(12)"`
+	SecondSecure int64  `gorm:"type:bigint(30)"`
 	UpdatedAt    int64  `gorm:"autoUpdateTime:milli;comment:'更新時間'"`
-	CreatedAt    int64  `gorm:"type:int(30);comment:'創建時間'"`
+	CreatedAt    int64  `gorm:"type:bigint(30);comment:'創建時間'"`
 }
