@@ -8,6 +8,7 @@ import (
 	"github.com/renyusuke/brunnen/tbl"
 	"github.com/renyusuke/brunnen/vars"
 	"net/http"
+	"strconv"
 )
 
 var (
@@ -37,6 +38,7 @@ type Base struct {
 	IP                string `json:"ip"`
 	Path              string `json:"path"`
 	Token             string `json:"token"`
+	Lan               int64  `json:"lan"`
 	FirstValidatorId  int64  `json:"first_validator_id"`  // 一次验证人ID
 	FirstValidator    string `json:"first_validator"`     // 一次验证人账号
 	SecondValidatorId int64  `json:"second_validator_id"` // 二次验证人ID
@@ -63,7 +65,13 @@ func GetBase(ctx *gin.Context) (*Base, error) {
 			out.Validator += "/" + out.SecondValidator
 		}
 	}
-
+	lan := ctx.Value("lan")
+	lanStr := fmt.Sprintf("%v", lan)
+	n, err := strconv.ParseInt(lanStr, 10, 64)
+	if err == nil {
+		fmt.Printf("%d of type %T", n, n)
+	}
+	out.Lan = n
 	return &out, nil
 }
 
