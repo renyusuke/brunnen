@@ -11,5 +11,5 @@ type Admin struct {
 	GToken       string `gorm:"type:varchar(50)"`
 	SecondSecure int64  `gorm:"type:int(12)"`
 	UpdatedAt    int64  `gorm:"autoUpdateTime:milli;comment:'更新時間'"`
-	CreatedAt    int64  `gorm:"type:int(14);comment:'創建時間'"`
+	CreatedAt    int64  `gorm:"type:int(30);comment:'創建時間'"`
 }

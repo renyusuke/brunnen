@@ -15,12 +15,15 @@ func GetToken(ctx *gin.Context, rdb *redis.Client, key string) (res bool, err er
 	if err != nil {
 		return false, err, token
 	}
+
 	if err != nil {
 		return false, err, ""
+
 	} else {
 		err = SetToken(ctx, rdb, key, token)
 		if err != nil {
 			return false, err, ""
+
 		}
 	}
 	return true, err, token
@@ -29,4 +32,5 @@ func GetToken(ctx *gin.Context, rdb *redis.Client, key string) (res bool, err er
 func SetToken(ctx *gin.Context, rdb *redis.Client, key string, value any) (err error) {
 	err = rdb.Set(ctx, key, value, expireTim).Err()
 	return err
+
 }
