@@ -9,6 +9,8 @@ const (
 	AdminRouteDepositOrder      = 140000 //存款新訂單
 	AdminRouteClientUser        = 200000 //admin客戶的使用者
 	AdminRouteAdmin             = 300000 //admin的使用者
+	AdminRouteNew               = 300001
+	AdminRouteEdit              = 300002
 	AdminRouteSecurity          = 400000 //風控設置
 	AdminRouteSecurityAdmin     = 410000 //admin使用者風控
 	AdminRouteSecurityUser      = 420000 //商戶使用者風控
