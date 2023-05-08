@@ -13,7 +13,7 @@ type OrderWithdraw struct {
 	Rate            int64   `gorm:"type:int(12);DefaultValue(0)"`       // 兌換匯率
 	AssociationID   int64   `gorm:"type:int(12);DefaultValue(0)"`       // 依照Type 判別 如果是自有卡 就是卡id 如果是 三方 就是 三方ID 以此類推
 	Sign            string  `gorm:"type:varchar(60)"`                   // 加密sign
-	Amount          float64 `gorm:"type:decimal(12,4);"`                // 金額
+	Amount          float64 `gorm:"type:decimal(12,4);comment:'金額'"`    // 金額
 	BankName        string  `gorm:"type:varchar(30)"`                   // 玩家銀行名稱
 	BankAccount     string  `gorm:"type:varchar(50)"`                   // 玩家銀行帳號
 	BankArea        string  `gorm:"type:varchar(50)"`                   // 支行
