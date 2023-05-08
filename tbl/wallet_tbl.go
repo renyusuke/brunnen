@@ -7,10 +7,10 @@ type Wallet struct {
 	CurrencyId          int64   `gorm:"type:int(12);comment:'幣種'"`
 	WalletType          int64   `gorm:"type:int(12);comment:'錢包類別'"`
 	WalletStatus        int64   `gorm:"type:int(12);comment:'錢包狀態'"`
-	Balance             int64   `gorm:"type:bigint(20);comment:'錢包餘額'"`
-	TempWithdrawBalance int64   `gorm:"type:bigint(20);comment:'異動中提款餘額'"`
-	TempDepositBalance  int64   `gorm:"type:bigint(20);comment:'異動中儲值餘額'"`
-	FreezeBalance       int64   `gorm:"type:bigint(20);comment:'凍結餘額'"`
+	Balance             float64 `gorm:"type:decimal(14,4);comment:'錢包餘額'"`
+	TempWithdrawBalance float64 `gorm:"type:decimal(14,4);comment:'異動中提款餘額'"`
+	TempDepositBalance  float64 `gorm:"type:decimal(14,4);comment:'異動中儲值餘額'"`
+	FreezeBalance       float64 `gorm:"type:decimal(14,4);comment:'凍結餘額'"`
 	OperatorName        string  `gorm:"type:varchar(20);comment:'創建人'"`
 	DepositRate         float64 `gorm:"type:decimal(14,4);comment:'代收費率'"`
 	WithdrawRate        float64 `gorm:"type:decimal(14,4);comment:'代付費率'"`
