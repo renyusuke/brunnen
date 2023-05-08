@@ -15,14 +15,23 @@ var (
 	ErrSystemError       = errors.New("系統錯誤")
 	ErrAdminNameNotExist = errors.New("管理者名稱不存在")
 	ErrPassNotEnough     = errors.New("密碼長度不夠")
-	ErrSystemBusy        = errors.New("系統繁忙")
-	ErrMap               = map[int64]error{
+
+	/*錢包*/
+	ErrClientWalletAlreadyExist = errors.New("商戶已有此錢包")
+
+	ErrSystemBusy = errors.New("系統繁忙")
+	ErrMap        = map[int64]error{
 		enums.RequestSuccess:       RequestSuccess,
 		enums.ErrAdminTokenExpired: ErrAdminTokenExpired,
 		enums.ErrVerifyFail:        ErrVerifyFail,
 		enums.ErrAccountFreeze:     ErrAccountFreeze,
 		enums.ErrNameDuplicated:    ErrDuplicatedName,
 		enums.ErrPassNotEnough:     ErrPassNotEnough,
+
+		/*錢包*/
+		enums.ErrClientWalletAlreadyExist: ErrClientWalletAlreadyExist,
+
+		/*系統*/
 		enums.ErrSystemError:       ErrSystemError,
 		enums.ErrAdminNameNotExist: ErrAdminNameNotExist,
 		enums.ErrSystemBusy:        ErrSystemBusy,
