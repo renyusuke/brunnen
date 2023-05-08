@@ -1,7 +1,7 @@
 package tbl
 
-// Rate 匯率
-type Rate struct {
+// RateCurrency 匯率
+type RateCurrency struct {
 	Model
 	ClientId       int64   `gorm:"type:int(12);comment:'商戶ID'"`
 	FromCurrencyId int64   `gorm:"type:int(12);comment:'來源幣種'"`
