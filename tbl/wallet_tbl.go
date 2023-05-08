@@ -15,5 +15,5 @@ type Wallet struct {
 	DepositRate         float64 `gorm:"type:decimal(14,4);comment:'代收費率'"`
 	WithdrawRate        float64 `gorm:"type:decimal(14,4);comment:'代付費率'"`
 	UpdatedAt           int64   `gorm:"autoUpdateTime:milli"`
-	CreatedAt           int64   `gorm:"type:bigint(20);comment:'創建時間'"`
+	CreatedAt           int64   `gorm:"type:bigint(30);comment:'創建時間'"`
 }
