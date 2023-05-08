@@ -7,5 +7,5 @@ type Client struct {
 	ClientStatus int64  `gorm:"type:int(12);comment:'商戶狀態';comment:'1:啟用 2:停用'"`
 	CreatorName  string `gorm:"type:varchar(40)"`
 	UpdatedAt    int64  `gorm:"autoUpdateTime:milli;comment:'更新時間'"`
-	CreatedAt    int64  `gorm:"type:int(14);comment:'創建時間'"`
+	CreatedAt    int64  `gorm:"type:int(20);comment:'創建時間'"`
 }

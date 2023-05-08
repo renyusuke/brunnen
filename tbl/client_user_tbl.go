@@ -10,5 +10,5 @@ type ClientUser struct {
 	Status         string `gorm:"type:varchar(30);comment:'狀態'"`
 	Type           string `gorm:"type:varchar(30);comment:'類別'"`
 	UpdatedAt      int64  `gorm:"autoUpdateTime:milli;comment:'更新時間'"`
-	CreatedAt      int64  `gorm:"type:int(14);comment:'創建時間'"`
+	CreatedAt      int64  `gorm:"type:int(20);comment:'創建時間'"`
 }
