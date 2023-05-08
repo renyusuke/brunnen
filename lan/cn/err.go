@@ -12,8 +12,10 @@ var (
 	ErrAccountFreeze     = errors.New("已凍結")
 
 	ErrDuplicatedName    = errors.New("名稱重複")
-	ErrPassNotEnough     = errors.New("密碼長度不夠")
+	ErrSystemError       = errors.New("系統錯誤")
 	ErrAdminNameNotExist = errors.New("管理者名稱不存在")
+	ErrPassNotEnough     = errors.New("密碼長度不夠")
+	ErrSystemBusy        = errors.New("系統繁忙")
 	ErrMap               = map[int64]error{
 		enums.RequestSuccess:       RequestSuccess,
 		enums.ErrAdminTokenExpired: ErrAdminTokenExpired,
@@ -21,6 +23,8 @@ var (
 		enums.ErrAccountFreeze:     ErrAccountFreeze,
 		enums.ErrNameDuplicated:    ErrDuplicatedName,
 		enums.ErrPassNotEnough:     ErrPassNotEnough,
+		enums.ErrSystemError:       ErrSystemError,
 		enums.ErrAdminNameNotExist: ErrAdminNameNotExist,
+		enums.ErrSystemBusy:        ErrSystemBusy,
 	}
 )

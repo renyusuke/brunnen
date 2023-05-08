@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	key        = "public:lock:%v"
+	key        = "public:lock:%v:"
 	expiration = 10 * time.Second
 )
 
