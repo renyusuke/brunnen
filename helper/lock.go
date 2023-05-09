@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
+	"log"
 	"time"
 
 	"context"
@@ -27,9 +28,11 @@ func SetLock(ctx *gin.Context, r *redis.Client, val interface{}) (res bool, err 
 		for {
 			select {
 			case <-ctx.Done():
+				log.Println("上下文執行結束 監聽結束")
 				return
 
 			case <-time.After(expiration):
+				log.Println("鎖到期")
 				return
 			}
 		}
