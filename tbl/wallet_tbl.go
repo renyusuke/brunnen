@@ -2,7 +2,7 @@ package tbl
 
 // Wallet 商戶的錢包
 type Wallet struct {
-	Model
+	Id                  int64   `gorm:"primaryKey;unique;not null;type:int(250)"`
 	ClientId            int64   `gorm:"type:int(12);comment:'商戶ID'"`
 	CurrencyId          int64   `gorm:"type:int(12);comment:'幣種'"`
 	WalletType          int64   `gorm:"type:int(12);comment:'錢包類別'"`

@@ -1,7 +1,7 @@
 package tbl
 
 type Card struct {
-	Model
+	Id       int64  `gorm:"primaryKey;unique;not null;type:int(250)"`
 	BankName string `gorm:"type:varchar(30);comment:'銀行名稱'"`
 	BackArea string `gorm:"type:varchar(30);comment:'銀行網點'"`
 

@@ -1,7 +1,7 @@
 package tbl
 
 type Group struct {
-	Model
+	Id        int64  `gorm:"primaryKey;unique;not null;type:int(250)"`
 	GroupName string `gorm:"type:varchar(30)"`
 	Path      string `gorm:"type:varchar(30)"`
 	Type      int64  `gorm:"type:int(12)"`

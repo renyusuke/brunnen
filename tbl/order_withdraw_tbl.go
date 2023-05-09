@@ -2,7 +2,7 @@ package tbl
 
 // OrderWithdraw 代付
 type OrderWithdraw struct {
-	Model
+	Id              int64   `gorm:"primaryKey;unique;not null;type:int(250)"`
 	OrderNo         string  `gorm:"type:varchar(60);DefaultValue('_')"` // 我方訂單編號
 	MerchantNo      string  `gorm:"type:varchar(60)"`                   // 平台號
 	ClientId        int64   `gorm:"type:int(12)"`                       // 申請商戶

@@ -2,7 +2,7 @@ package tbl
 
 // Users 商戶使用者
 type Users struct {
-	Model
+	Id           int64  `gorm:"primaryKey;unique;not null;type:int(250)"`
 	UserName     string `gorm:"type:varchar(20)"`
 	Type         int64  `gorm:"type:int(12)"`
 	Status       int64  `gorm:"type:int(12)"`

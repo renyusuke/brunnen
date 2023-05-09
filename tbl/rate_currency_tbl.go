@@ -2,7 +2,7 @@ package tbl
 
 // RateExchange 匯率
 type RateExchange struct {
-	Model
+	Id             int64   `gorm:"primaryKey;unique;not null;type:int(250)"`
 	ClientId       int64   `gorm:"type:int(12);comment:'商戶ID'"`
 	FromCurrencyId int64   `gorm:"type:int(12);comment:'來源幣種'"`
 	ToCurrencyId   int64   `gorm:"type:int(12);comment:'目標幣種'"`

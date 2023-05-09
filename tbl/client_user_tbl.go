@@ -2,7 +2,7 @@ package tbl
 
 // ClientUser 商戶使用者
 type ClientUser struct {
-	Model
+	Id             int64  `gorm:"primaryKey;unique;not null;type:int(250)"`
 	ClientUserSign string `gorm:"type:varchar(50);comment:'商戶使用者唯一標記'"`
 	Name           int64  `gorm:"type:varchar(20);primaryKey;comment:'名稱'"`
 	Account        string `gorm:"type:varchar(30);comment:'帳號'"`

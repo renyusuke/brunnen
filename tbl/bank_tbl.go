@@ -2,6 +2,6 @@ package tbl
 
 // Bank 沒使用
 type Bank struct {
-	Model
+	Id       int64 `gorm:"primaryKey;unique;not null;type:int(250)"`
 	BankName string
 }
