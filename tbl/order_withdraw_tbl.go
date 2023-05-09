@@ -18,7 +18,7 @@ type OrderWithdraw struct {
 	BankAccount     string  `gorm:"type:varchar(50)"`                   // 玩家銀行帳號
 	BankArea        string  `gorm:"type:varchar(50)"`                   // 支行
 	UserSign        string  `gorm:"type:varchar(50)"`                   // 玩家唯一識別
-	OperatorName    string  `gorm:"type:varchar(60);DefaultValue(0)"`   // 經手人
+	Operator        string  `gorm:"type:varchar(60);DefaultValue(0)"`   // 經手人
 	ClientCreatedAt int64   `gorm:"type:int(12)"`                       // 平台創建時間
 	CreatedAt       int64   `gorm:"type:bigint(20)"`                    // 創建時間
 	UpdatedAt       int64   `gorm:"type:bigint(20)"`                    // 更新時間

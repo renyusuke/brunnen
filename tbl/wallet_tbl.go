@@ -11,7 +11,7 @@ type Wallet struct {
 	TempWithdrawBalance float64 `gorm:"type:decimal(14,4);comment:'異動中提款餘額'"`
 	TempDepositBalance  float64 `gorm:"type:decimal(14,4);comment:'異動中儲值餘額'"`
 	FreezeBalance       float64 `gorm:"type:decimal(14,4);comment:'凍結餘額'"`
-	OperatorName        string  `gorm:"type:varchar(20);comment:'創建人'"`
+	Operator            string  `gorm:"type:varchar(20);comment:'創建人'"`
 	DepositRate         float64 `gorm:"type:decimal(14,4);comment:'代收費率'"`
 	WithdrawRate        float64 `gorm:"type:decimal(14,4);comment:'代付費率'"`
 	UpdatedAt           int64   `gorm:"autoUpdateTime:milli"`

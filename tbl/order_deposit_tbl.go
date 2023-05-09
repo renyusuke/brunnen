@@ -14,7 +14,7 @@ type OrderDeposit struct {
 	Rate            int64   `gorm:"type:int(12);DefaultValue(0)"`       // 兌換幣種
 	Sign            string  `gorm:"type:varchar(60)"`                   // 加密sign
 	Amount          float64 `gorm:"type:decimal(12,4);comment:'金額'"`    // 金額
-	OperatorName    string  `gorm:"type:varchar(60);DefaultValue('_')"` // 經手人
+	Operator        string  `gorm:"type:varchar(60);DefaultValue('_')"` // 經手人
 	ClientCreatedAt int64   `gorm:"type:int(12)"`                       // 平台創建時間
 	CreatedAt       int64   `gorm:"type:bigint(20)"`                    // 創建時間
 	UpdatedAt       int64   `gorm:"type:bigint(20)"`                    // 更新時間
