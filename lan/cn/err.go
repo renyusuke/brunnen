@@ -2,7 +2,7 @@ package cn
 
 import (
 	"errors"
-	enums "github.com/renyusuke/brunnen/enums"
+	"github.com/renyusuke/brunnen/constant/enums"
 )
 
 var (

@@ -1,6 +1,8 @@
 package cn
 
-import "github.com/renyusuke/brunnen/enums"
+import (
+	"github.com/renyusuke/brunnen/constant/enums"
+)
 
 var (
 	WalletTypeCNY  = "人民幣錢包"

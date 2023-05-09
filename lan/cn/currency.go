@@ -1,6 +1,8 @@
 package cn
 
-import "github.com/renyusuke/brunnen/enums"
+import (
+	"github.com/renyusuke/brunnen/constant/enums"
+)
 
 var (
 	CurrencyPHP  = "菲律賓披索"
