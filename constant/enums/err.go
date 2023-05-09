@@ -9,6 +9,9 @@ const (
 	ErrAccountFreeze     = 10003 //帳號已凍結
 	ErrNameDuplicated    = 20001 //名稱重複
 	ErrPassNotEnough     = 20002 //密碼長度不足
+
+	//30000 - 39999 Client 相關
+	ErrAdminClientNotExist = 30001
 	/*40000~ 49999 wallet*/
 	ErrClientWalletAlreadyExist = 40001
 

@@ -10,7 +10,10 @@ var (
 	ErrAdminTokenExpired = errors.New("token 失效，請重新登入")
 	ErrVerifyFail        = errors.New("驗證失敗")
 	ErrAccountFreeze     = errors.New("已凍結")
+	//商戶
+	ErrAdminClientNotExist = errors.New("商戶不存在")
 
+	//共用
 	ErrDuplicatedName    = errors.New("名稱重複")
 	ErrSystemError       = errors.New("系統錯誤")
 	ErrAdminNameNotExist = errors.New("管理者名稱不存在")
@@ -27,7 +30,8 @@ var (
 		enums.ErrAccountFreeze:     ErrAccountFreeze,
 		enums.ErrNameDuplicated:    ErrDuplicatedName,
 		enums.ErrPassNotEnough:     ErrPassNotEnough,
-
+		//商戶
+		enums.ErrAdminClientNotExist: ErrAdminClientNotExist,
 		/*錢包*/
 		enums.ErrClientWalletAlreadyExist: ErrClientWalletAlreadyExist,
 
