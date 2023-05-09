@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"ph-gitlab.vipsroom.net/basis/public/constants/enums"
+	"github.com/renyusuke/brunnen/constants/enums"
 )
 
 // GetRand 随机字符串

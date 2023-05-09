@@ -7,7 +7,7 @@ import (
 	"github.com/doug-martin/goqu/v9"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/pkg/errors"
-	"ph-gitlab.vipsroom.net/basis/public/helper/slicex"
+	"github.com/renyusuke/brunnen/helper/slicex"
 )
 
 type table interface {

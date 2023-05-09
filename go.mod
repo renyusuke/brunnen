@@ -16,7 +16,6 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/redis/go-redis/v9 v9.0.3
 	github.com/young2j/gocopy v1.1.13
-	ph-gitlab.vipsroom.net/basis/public v0.0.0-20230428040134-2e7f93a83b6a
 	stathat.com/c/consistent v1.0.0
 )
 

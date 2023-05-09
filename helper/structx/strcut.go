@@ -2,7 +2,7 @@ package structx
 
 import (
 	"errors"
-	"ph-gitlab.vipsroom.net/basis/public/helper/strx"
+	"github.com/renyusuke/brunnen/helper/strx"
 	"reflect"
 
 	"github.com/goccy/go-json"

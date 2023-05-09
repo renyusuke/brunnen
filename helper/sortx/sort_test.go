@@ -2,7 +2,7 @@ package sortx
 
 import (
 	"fmt"
-	"ph-gitlab.vipsroom.net/basis/public/helper/randx"
+	"github.com/renyusuke/brunnen/helper/randx"
 	"strconv"
 	"testing"
 )
