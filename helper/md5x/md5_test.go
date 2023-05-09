@@ -3,7 +3,7 @@ package md5x
 import (
 	"testing"
 
-	"ph-gitlab.vipsroom.net/basis/public/helper/strx"
+	"github.com/renyusuke/brunnen/helper/strx"
 )
 
 func TestByString(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"ph-gitlab.vipsroom.net/basis/public/helper/strx"
+	"github.com/renyusuke/brunnen/helper/strx"
 )
 
 /** 加密方式 **/

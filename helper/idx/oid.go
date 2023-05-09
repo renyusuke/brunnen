@@ -1,7 +1,7 @@
 package idx
 
 import (
-	"ph-gitlab.vipsroom.net/basis/public/helper/randx"
+	"github.com/renyusuke/brunnen/helper/randx"
 	"strconv"
 	"time"
 )
