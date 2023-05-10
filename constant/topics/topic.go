@@ -10,7 +10,7 @@ var (
 	//AdminRouteKey 接口過濾
 	AdminRouteKey = "oa:admin:route:%v" //v 是 path
 	//ClientWallet 錢包分布式鎖
-	ClientWallet = "ct:wallet:%v:client:%v"
+	ClientWallet = "ct:client:%v:wallet:%v:currency:%v"
 
 	//ClientMerchantNo 的 Prefix
 	ClientMerchantNo = "cl"
