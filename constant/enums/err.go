@@ -21,4 +21,5 @@ const (
 	ErrSystemBusy        = 50002 //系統繁忙
 	ErrMissingLanParam   = 50003
 	ErrSignInvalid       = 50004
+	ErrMissingParam      = 50005
 )
