@@ -11,7 +11,8 @@ var (
 	AdminRouteKey = "oa:admin:route:%v" //v 是 path
 	//ClientWallet 錢包分布式鎖
 	ClientWallet = "ct:client:%v:wallet:%v:currency:%v"
-
+	//WalletNew 新增錢包
+	WalletNew = "wn:client:%v"
 	//ClientMerchantNo 的 Prefix
 	ClientMerchantNo = "cl"
 )
