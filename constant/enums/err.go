@@ -12,8 +12,10 @@ const (
 
 	// ErrAdminClientNotExist 30000 - 39999 Client 相關
 	ErrAdminClientNotExist = 30001
+
 	// ErrClientWalletAlreadyExist /*40000~ 49999 wallet*/
 	ErrClientWalletAlreadyExist = 40001
+	ErrClientBalanceNotEnough   = 40002
 
 	// ErrSystemError /*50000~59999 共用*/
 	ErrSystemError       = 50000 //系統錯誤

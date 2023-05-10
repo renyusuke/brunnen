@@ -23,9 +23,10 @@ var (
 	ErrMissingParam      = errors.New("缺少參數")
 	/*錢包*/
 	ErrClientWalletAlreadyExist = errors.New("商戶已有此錢包")
+	ErrSystemBusy               = errors.New("系統繁忙")
+	ErrClientBalanceNotEnough   = errors.New("餘額不足")
 
-	ErrSystemBusy = errors.New("系統繁忙")
-	ErrMap        = map[int64]error{
+	ErrMap = map[int64]error{
 		enums.RequestSuccess:       RequestSuccess,
 		enums.ErrAdminTokenExpired: ErrAdminTokenExpired,
 		enums.ErrVerifyFail:        ErrVerifyFail,
@@ -37,6 +38,7 @@ var (
 		/*錢包*/
 		enums.ErrClientWalletAlreadyExist: ErrClientWalletAlreadyExist,
 		enums.ErrSignInvalid:              ErrSignInvalid,
+		enums.ErrClientBalanceNotEnough:   ErrClientBalanceNotEnough,
 		/*系統*/
 		enums.ErrSystemError:       ErrSystemError,
 		enums.ErrAdminNameNotExist: ErrAdminNameNotExist,
