@@ -19,6 +19,7 @@ var (
 	ErrAdminNameNotExist = errors.New("管理者名稱不存在")
 	ErrPassNotEnough     = errors.New("密碼長度不夠")
 	ErrMissingLanParam   = errors.New("缺少Lan 參數")
+	ErrSignInvalid       = errors.New("Sign 錯誤")
 	/*錢包*/
 	ErrClientWalletAlreadyExist = errors.New("商戶已有此錢包")
 
@@ -34,7 +35,7 @@ var (
 		enums.ErrAdminClientNotExist: ErrAdminClientNotExist,
 		/*錢包*/
 		enums.ErrClientWalletAlreadyExist: ErrClientWalletAlreadyExist,
-
+		enums.ErrSignInvalid:              ErrSignInvalid,
 		/*系統*/
 		enums.ErrSystemError:       ErrSystemError,
 		enums.ErrAdminNameNotExist: ErrAdminNameNotExist,

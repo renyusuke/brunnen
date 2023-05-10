@@ -20,4 +20,5 @@ const (
 	ErrAdminNameNotExist = 50001 //Admin 名稱不存在
 	ErrSystemBusy        = 50002 //系統繁忙
 	ErrMissingLanParam   = 50003
+	ErrSignInvalid       = 50004
 )
