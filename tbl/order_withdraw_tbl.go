@@ -6,6 +6,7 @@ type OrderWithdraw struct {
 	OrderNo         string  `gorm:"type:varchar(100);DefaultValue('_')"` // 我方訂單編號
 	MerchantOrderNo string  `gorm:"type:varchar(100);DefaultValue('_')"` // 商戶訂單號
 	MerchantNo      string  `gorm:"type:varchar(60)"`                    // 平台號
+	RedirectUrl     string  `gorm:"type:varchar(100)"`                   // 回調地址
 	ClientId        int64   `gorm:"type:int(12)"`                        // 申請商戶
 	Type            int64   `gorm:"type:int(12);DefaultValue(0)"`        // 訂單模式 (1. 等待派發 2. 自有卡 3. 三方 4. 車隊)
 	Status          int64   `gorm:"type:int(12);DefaultValue(0)"`        // 訂單狀態 (1. 入單成功 2. 處理中（拉單後） 3. 已完成 4. 退回  )
